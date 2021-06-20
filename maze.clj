@@ -56,7 +56,7 @@
                                   (.draw g
                                     (java.awt.geom.Line2D$Double.
                                       xa (* 2 ya) xb (* 2 yb))))]
-                  (doseq [[[xa ya] [xb yb]] (map sort maze)]
+                  (doseq [[[xa ya] [_ yb]] (map sort maze)]
                     (draw-line
                       (cond
                         (= ya yb) [[(inc xa) (+ ya 0.4)] [(inc xa) (- ya 0.4)]]
